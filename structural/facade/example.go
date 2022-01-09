@@ -6,7 +6,6 @@ import (
 )
 
 func Example() {
-	fmt.Println()
 	walletFacade := newWalletFacade("abc", 1234)
 	fmt.Println()
 

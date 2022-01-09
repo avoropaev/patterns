@@ -1,14 +1,18 @@
 package singleton
 
-import "fmt"
+import "sync"
 
 func Example() {
-	for i := 0; i < 7; i++ {
-		go getInstance()
+	var wg sync.WaitGroup
+
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+
+		go func() {
+			defer wg.Done()
+			getInstance()
+		}()
 	}
 
-	_, err := fmt.Scanln()
-	if err != nil {
-		return
-	}
+	wg.Wait()
 }
