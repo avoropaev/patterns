@@ -1,7 +1,6 @@
 package abstract_factory
 
-type nike struct {
-}
+type nike struct {}
 
 func (n *nike) makeShoe() iShoe {
 	return &nikeShoe{

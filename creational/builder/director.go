@@ -18,5 +18,6 @@ func (d *director) buildHouse() house {
 	d.builder.setDoorType()
 	d.builder.setWindowType()
 	d.builder.setNumFloor()
+
 	return d.builder.getHouse()
 }

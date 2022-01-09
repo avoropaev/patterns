@@ -1,7 +1,6 @@
 package abstract_factory
 
-type adidas struct {
-}
+type adidas struct {}
 
 func (a *adidas) makeShoe() iShoe {
 	return &adidasShoe{
